@@ -1,8 +1,8 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="1024" height="1024">
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#0f3d2e"/>
-      <stop offset="1" stop-color="#05140f"/>
+      <stop offset="0" stop-color="#1c2a25"/>
+      <stop offset="1" stop-color="#0d1311"/>
     </linearGradient>
     <clipPath id="tile"><rect x="100" y="100" width="824" height="824" rx="185"/></clipPath>
   </defs>
@@ -10,44 +10,28 @@
   <rect x="100" y="100" width="824" height="824" rx="185" fill="url(#bg)"/>
 
   <g clip-path="url(#tile)">
-    <!-- tail -->
-    <path d="M600 800 C700 812 742 770 724 722" fill="none" stroke="#0b0f0d" stroke-width="40" stroke-linecap="round"/>
-    <path d="M724 722 C700 700 704 664 736 652 C752 680 760 702 724 722 Z" fill="#10b981"/>
-
-    <!-- wings -->
-    <path d="M330 600 C262 590 220 540 222 470 C256 492 290 498 318 494 C312 530 318 560 340 576 Z" fill="#1f7a5a"/>
-    <path d="M694 600 C762 590 804 540 802 470 C768 492 734 498 706 494 C712 530 706 560 684 576 Z" fill="#1f7a5a"/>
-
     <!-- horns, curling outward -->
-    <path d="M392 330 C360 300 330 268 318 222 C352 236 392 262 432 300 Z" fill="#10b981" stroke="#10b981" stroke-width="16" stroke-linejoin="round"/>
-    <path d="M632 330 C664 300 694 268 706 222 C672 236 632 262 592 300 Z" fill="#10b981" stroke="#10b981" stroke-width="16" stroke-linejoin="round"/>
+    <path d="M330 380 C286 340 250 290 236 222 C290 246 344 288 392 336 Z" fill="#a7f3d0" stroke="#a7f3d0" stroke-width="22" stroke-linejoin="round"/>
+    <path d="M694 380 C738 340 774 290 788 222 C734 246 680 288 632 336 Z" fill="#a7f3d0" stroke="#a7f3d0" stroke-width="22" stroke-linejoin="round"/>
 
     <!-- soft crest -->
-    <path d="M446 296 L466 250 L486 296 Z" fill="#10b981" stroke="#10b981" stroke-width="14" stroke-linejoin="round"/>
-    <path d="M490 290 L512 236 L534 290 Z" fill="#10b981" stroke="#10b981" stroke-width="14" stroke-linejoin="round"/>
-    <path d="M538 296 L558 250 L578 296 Z" fill="#10b981" stroke="#10b981" stroke-width="14" stroke-linejoin="round"/>
+    <path d="M462 300 L486 248 L510 300 Z" fill="#a7f3d0" stroke="#a7f3d0" stroke-width="16" stroke-linejoin="round"/>
+    <path d="M514 300 L538 248 L562 300 Z" fill="#a7f3d0" stroke="#a7f3d0" stroke-width="16" stroke-linejoin="round" transform="translate(-0 0)"/>
 
-    <!-- body, feet, head -->
-    <ellipse cx="512" cy="740" rx="128" ry="104" fill="#0b0f0d"/>
-    <ellipse cx="452" cy="836" rx="44" ry="26" fill="#0b0f0d"/>
-    <ellipse cx="572" cy="836" rx="44" ry="26" fill="#0b0f0d"/>
-    <circle cx="512" cy="490" r="215" fill="#0b0f0d"/>
+    <!-- head: wide, soft, a little narrower at the snout -->
+    <path d="M512 290 C702 290 800 400 800 548 C800 702 672 800 512 800 C352 800 224 702 224 548 C224 400 322 290 512 290 Z" fill="#0a0d0c"/>
 
-    <!-- eyes: soft upright ovals, pupils centred and looking slightly in -->
-    <ellipse cx="434" cy="512" rx="56" ry="66" fill="#34d399"/>
-    <ellipse cx="590" cy="512" rx="56" ry="66" fill="#34d399"/>
-    <ellipse cx="440" cy="518" rx="38" ry="50" fill="#05140f"/>
-    <ellipse cx="584" cy="518" rx="38" ry="50" fill="#05140f"/>
-    <circle cx="424" cy="496" r="14" fill="#ecfdf5"/>
-    <circle cx="568" cy="496" r="14" fill="#ecfdf5"/>
-    <circle cx="452" cy="540" r="6" fill="#ecfdf5"/>
-    <circle cx="596" cy="540" r="6" fill="#ecfdf5"/>
+    <!-- eyes -->
+    <ellipse cx="398" cy="540" rx="72" ry="84" fill="#a7f3d0"/>
+    <ellipse cx="626" cy="540" rx="72" ry="84" fill="#a7f3d0"/>
+    <ellipse cx="404" cy="548" rx="40" ry="62" fill="#0a0d0c"/>
+    <ellipse cx="620" cy="548" rx="40" ry="62" fill="#0a0d0c"/>
+    <circle cx="384" cy="514" r="16" fill="#f0fdf4"/>
+    <circle cx="604" cy="514" r="16" fill="#f0fdf4"/>
 
-    <!-- blush -->
-    <ellipse cx="374" cy="604" rx="34" ry="18" fill="#34d399" opacity="0.28"/>
-    <ellipse cx="650" cy="604" rx="34" ry="18" fill="#34d399" opacity="0.28"/>
-
-    <!-- smile -->
-    <path d="M490 612 Q501 624 512 614 Q523 624 534 612" fill="none" stroke="#34d399" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+    <!-- nostrils and smile -->
+    <circle cx="488" cy="672" r="7" fill="#2a3a33"/>
+    <circle cx="536" cy="672" r="7" fill="#2a3a33"/>
+    <path d="M452 712 Q512 748 572 712" fill="none" stroke="#a7f3d0" stroke-width="12" stroke-linecap="round"/>
   </g>
 </svg>
