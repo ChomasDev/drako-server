@@ -44,6 +44,7 @@ pub fn main(init: std.process.Init) !void {
         .io = io,
         .out = &stdout.interface,
         .db_path = try dbPath(gpa, io, init.environ_map),
+        .shell = init.environ_map.get("SHELL"),
     };
 
     if (eql(command, "new")) return app.new(&args);
@@ -72,6 +73,8 @@ const App = struct {
     io: std.Io,
     out: *std.Io.Writer,
     db_path: [:0]const u8,
+    /// The user's login shell for new terminals; zmx falls back to /bin/sh without it.
+    shell: ?[]const u8,
 
     fn new(self: App, args: *std.process.Args.Iterator) !void {
         var tab: []const u8 = DEFAULT_TAB;
@@ -103,6 +106,7 @@ const App = struct {
         _ = try zmx.create(self.gpa, self.io, try sessionName(self.gpa, &id), .{
             .command = if (command.items.len > 0) command.items else null,
             .cwd = cwd,
+            .shell = self.shell,
             .quiet = true,
         });
 
