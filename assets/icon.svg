@@ -1,4 +1,46 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-  <rect width="64" height="64" rx="14" fill="#c026d3"/>
-  <text x="32" y="32" dy="0.35em" text-anchor="middle" font-family="ui-sans-serif, system-ui, -apple-system, sans-serif" font-size="32" font-weight="600" fill="#ffffff">N</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="1024" height="1024">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0f3d2e"/>
+      <stop offset="1" stop-color="#05140f"/>
+    </linearGradient>
+    <clipPath id="tile"><rect x="100" y="100" width="824" height="824" rx="185"/></clipPath>
+  </defs>
+
+  <rect x="100" y="100" width="824" height="824" rx="185" fill="url(#bg)"/>
+
+  <g clip-path="url(#tile)">
+    <!-- tail -->
+    <path d="M610 800 C720 820 770 760 740 700" fill="none" stroke="#0b0f0d" stroke-width="44" stroke-linecap="round"/>
+    <path d="M740 700 L712 650 L776 668 Z" fill="#10b981"/>
+
+    <!-- wings -->
+    <path d="M392 600 C300 600 220 540 196 430 C236 456 268 470 300 470 C296 500 304 520 320 534 C334 516 354 508 380 512 Z" fill="#1f7a5a"/>
+    <path d="M632 600 C724 600 804 540 828 430 C788 456 756 470 724 470 C728 500 720 520 704 534 C690 516 670 508 644 512 Z" fill="#1f7a5a"/>
+
+    <!-- horns -->
+    <path d="M392 340 C368 290 360 246 376 206 C404 246 434 286 452 322 Z" fill="#10b981"/>
+    <path d="M632 340 C656 290 664 246 648 206 C620 246 590 286 572 322 Z" fill="#10b981"/>
+    <path d="M490 296 L512 262 L534 296 Z" fill="#10b981"/>
+
+    <!-- body and head -->
+    <ellipse cx="512" cy="730" rx="150" ry="125" fill="#0b0f0d"/>
+    <circle cx="512" cy="480" r="190" fill="#0b0f0d"/>
+    <ellipse cx="512" cy="760" rx="82" ry="72" fill="#14201b"/>
+
+    <!-- eyes -->
+    <circle cx="438" cy="480" r="52" fill="#34d399"/>
+    <circle cx="586" cy="480" r="52" fill="#34d399"/>
+    <ellipse cx="438" cy="486" rx="12" ry="34" fill="#05140f"/>
+    <ellipse cx="586" cy="486" rx="12" ry="34" fill="#05140f"/>
+    <circle cx="420" cy="458" r="11" fill="#ecfdf5"/>
+    <circle cx="568" cy="458" r="11" fill="#ecfdf5"/>
+
+    <!-- nostrils -->
+    <circle cx="496" cy="560" r="5" fill="#2f4a3f"/>
+    <circle cx="528" cy="560" r="5" fill="#2f4a3f"/>
+
+    <!-- smile -->
+    <path d="M482 596 Q497 612 512 598 Q527 612 542 596" fill="none" stroke="#34d399" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
 </svg>
