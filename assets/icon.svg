@@ -33,14 +33,14 @@
     <ellipse cx="572" cy="836" rx="44" ry="26" fill="#0b0f0d"/>
     <circle cx="512" cy="490" r="215" fill="#0b0f0d"/>
 
-    <!-- eyes: tall ovals, tilted slightly outward -->
-    <ellipse cx="432" cy="510" rx="54" ry="72" fill="#34d399" transform="rotate(-12 432 510)"/>
-    <ellipse cx="592" cy="510" rx="54" ry="72" fill="#34d399" transform="rotate(12 592 510)"/>
-    <ellipse cx="438" cy="516" rx="26" ry="50" fill="#05140f" transform="rotate(-12 438 516)"/>
-    <ellipse cx="586" cy="516" rx="26" ry="50" fill="#05140f" transform="rotate(12 586 516)"/>
-    <circle cx="424" cy="490" r="13" fill="#ecfdf5"/>
-    <circle cx="574" cy="490" r="13" fill="#ecfdf5"/>
-    <circle cx="446" cy="540" r="6" fill="#ecfdf5"/>
+    <!-- eyes: soft upright ovals, pupils centred and looking slightly in -->
+    <ellipse cx="434" cy="512" rx="56" ry="66" fill="#34d399"/>
+    <ellipse cx="590" cy="512" rx="56" ry="66" fill="#34d399"/>
+    <ellipse cx="440" cy="518" rx="38" ry="50" fill="#05140f"/>
+    <ellipse cx="584" cy="518" rx="38" ry="50" fill="#05140f"/>
+    <circle cx="424" cy="496" r="14" fill="#ecfdf5"/>
+    <circle cx="568" cy="496" r="14" fill="#ecfdf5"/>
+    <circle cx="452" cy="540" r="6" fill="#ecfdf5"/>
     <circle cx="596" cy="540" r="6" fill="#ecfdf5"/>
 
     <!-- blush -->
