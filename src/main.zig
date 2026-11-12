@@ -25,7 +25,9 @@ const USAGE =
 ;
 
 pub fn main(init: std.process.Init) !void {
-    const gpa = init.arena.allocator();
+    // zmx's forked session daemon frees what it was handed with libc free(), so everything
+    // passed to zmx must come from c_allocator. Short-lived CLI: nothing is freed before exit.
+    const gpa = std.heap.c_allocator;
     const io = init.io;
 
     var args = try init.minimal.args.iterateAllocator(gpa);
