@@ -1,0 +1,37 @@
+# Push a tag like v0.2.0 to publish the drako binaries on GitHub Releases.
+# The Drako app downloads them from releases/latest when it installs the
+# server on a machine.
+name: Release
+
+on:
+  push:
+    tags: ["v*"]
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: macos-26
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: mlugg/setup-zig@v2
+        with:
+          version: 0.17.1
+
+      - name: Build
+        run: |
+          mkdir dist
+
+          for target in x86_64-linux-musl aarch64-linux-musl x86_64-macos aarch64-macos; do
+            zig build -Doptimize=ReleaseSafe -Dstrip=true -Dtarget=$target --prefix out/$target
+            cp out/$target/bin/drako dist/drako-$target
+          done
+
+          cd dist && shasum -a 256 drako-* > SHA256SUMS
+
+      - name: Publish
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh release create "$GITHUB_REF_NAME" dist/* --title "$GITHUB_REF_NAME" --generate-notes

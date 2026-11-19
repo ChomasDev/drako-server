@@ -4,6 +4,7 @@ const Translator = @import("translate_c").Translator;
 pub fn build(b: *std.Build) void {
     const target = b.standardTargetOptions(.{});
     const optimize = b.standardOptimizeOption(.{});
+    const strip = b.option(bool, "strip", "Leave debug info out of the binary");
 
     const zmx = b.dependency("zmx", .{
         .target = target,
@@ -22,6 +23,7 @@ pub fn build(b: *std.Build) void {
         .root_source_file = b.path("src/main.zig"),
         .target = target,
         .optimize = optimize,
+        .strip = strip,
         .link_libc = true,
         .imports = &.{
             .{ .name = "zmx", .module = zmx.module("zmx") },
